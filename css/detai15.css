@@ -1,0 +1,485 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1850px;
+    max-width: 100%;
+    /* height: 100vh; */
+    /* border: 1px solid; */
+    margin: 0 auto;
+}
+
+header {
+    max-width: 100%;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+    font-family: "Lemonada", sans-serif;
+    /* gap: 300px; */
+}
+
+header .title p {
+    margin-top: -15px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+
+nav .logo {
+    width: 15%;
+    height: 95%;
+    background-image: url(../img/logo2.png);
+}
+
+nav input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+/* nav button {
+    padding: 20px;
+    background-image: url(../img/search.png);
+    background-size: cover;
+} */
+
+nav label {
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav .sea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav label img {
+    max-width: 100%;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: green;
+    font-weight: bolder;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+main {
+    width: 100%;
+    height: 900px;
+    /* border: 1px solid; */
+}
+
+main .body1 {
+    width: 100%;
+    height: 45%;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    gap: 10px;
+}
+
+main .body1 .img {
+    width: 25%;
+    height: 90%;
+    background-color: #f7f6f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* border: 1px solid; */
+}
+
+main .body1 .img .img1 {
+    width: 90%;
+    height: 90%;
+    background-image: url(../img/hinh777.png);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+main .body1 .content {
+    width: 40%;
+    height: 90%;
+    /* border: 1px solid; */
+    /* color: green; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+main .body1 .content p {
+    /* margin-top: -10px; */
+    margin-bottom: -10px;
+}
+
+main .body1 .content h3 {
+    padding: 10px;
+    background-color: #f7f6f2;
+    color: brown;
+    width: 50%;
+    font-size: 40px;
+}
+
+main .body1 .content .but {
+    margin-top: 50px;
+}
+
+main .body1 .content .but button {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+main .body1 .content .but button:hover {
+    transform: scale(1.05);
+}
+
+main .body1 .content .but button:active {
+    transform: scale(0.9);
+}
+
+main .body1 .ship {
+    width: 25%;
+    height: 50%;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+main .body1 .tt {
+    width: 100%;
+    height: 20%;
+}
+
+main .body1 .xe {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+main .body1 .xe .im {
+    width: 27%;
+    height: 100%;
+    /* border: 1px solid; */
+    background-image: url(../img/xe.webp);
+    background-size: cover;
+}
+
+main .body1 .xe .ct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .body1 .huy {
+    width: 100%;
+    height: 40%;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-left: 10px;
+}
+
+main .body1 .huy .im2 {
+    width: 27%;
+    height: 100%;
+    background-image: url(../img/huychuong.webp);
+    background-size: cover;
+}
+
+main .body1 .huy .ct2 {
+    width: 70%;
+    height: 100%;
+}
+
+main .body2 {
+    width: 70%;
+    height: 65%;
+    padding: 30px;
+}
+
+main .body2 ul li {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    border: 1px solid;
+    background-color: black;
+}
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.modal2 {
+    display: flex;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    color: green;
+    font-weight: bolder;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal form h2 {
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+.modal form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+    box-shadow: 1px 1px 1px orange;
+}
+
+.modal form .log,
+.sig {
+    margin-top: 20px;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: -10px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(orange, green);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.modal form .sig:hover {
+    transform: scale(1.05);
+}
+
+.modal form .sig:active {
+    transform: scale(0.9);
+}
+
+.modal form .log:hover {
+    transform: scale(1.05);
+}
+
+.modal form .log:active {
+    transform: scale(0.9);
+}
+
+.modal form .close {
+    position: absolute;
+    width: 20px;
+    right: 0;
+    top: 0;
+    background: linear-gradient(orange, green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.modal .loiten {
+    color: red;
+    margin-top: -15px;
+    margin-left: -240px;
+    font-size: 10px;
+    display: none;
+}
+
+.modal .loipass {
+    color: red;
+    font-size: 10px;
+    margin-top: -14px;
+    margin-left: -160px;
+    display: none;
+}
+
+.modal .loi {
+    display: flex;
+}
+
+.modal .bored {
+    border: 1px solid red;
+}
+
+.dangky {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.dangky2 {
+    display: flex;
+}
+
+.dangky form {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    color: green;
+    font-weight: bolder;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.dangky form h2 {
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+.dangky form .name2,
+.password2,
+.email,
+.resetpassword {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+    box-shadow: 1px 1px 1px orange;
+}
+
+.dangky .radio {
+    margin-left: -150px;
+    margin-bottom: 10px;
+}
+
+.dangky form .submit {
+    margin-top: 20px;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: -10px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(orange, green);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.dangky form .submit:hover {
+    transform: scale(1.05);
+}
+
+.dangky form .submit:active {
+    transform: scale(0.9);
+}
+
+.dangky form .close1 {
+    position: absolute;
+    width: 20px;
+    right: 0;
+    top: 0;
+    background: linear-gradient(orange, green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.dangky .loiten2,
+.loiemail,
+.loiradio,
+.loireset {
+    color: red;
+    margin-top: -15px;
+    margin-left: -240px;
+    font-size: 10px;
+    display: none;
+}
+
+.dangky .loipass2 {
+    color: red;
+    font-size: 10px;
+    margin-top: -14px;
+    margin-left: -160px;
+    display: none;
+}
+
+.dangky .loi {
+    display: flex;
+}
+
+.dangky #form2 .bored {
+    border: 1px solid red;
+}
