@@ -224,3 +224,19 @@ dangky.addEventListener("click", function(e) {
         document.body.style.overflow = "scroll";
     }
 })
+let right = document.querySelector(".right");
+let left = document.querySelector(".left");
+let img1 = document.querySelector(".img1");
+let img2 = document.querySelector(".img2");
+right.addEventListener("click", function() {
+    img1.style.transform = "translateX(-100%)";
+    img2.style.transform = "translateX(0)";
+    left.style.opacity = "1";
+    right.style.opacity = "0";
+})
+left.addEventListener("click", function() {
+    img1.style.transform = "translateX(0)";
+    img2.style.transform = "translateX(100%)";
+    left.style.opacity = "0";
+    right.style.opacity = "1";
+})
