@@ -78,6 +78,10 @@ clos.addEventListener("click", function(e) {
     inp.value = "";
     pass.value = "";
     document.body.style.overflow = "scroll";
+    loiten.classList.remove("loi");
+    inp.classList.remove("bored");
+    loipass.classList.remove("loi");
+    pass.classList.remove("bored");
 })
 modal.addEventListener("click", function(e) {
     if (!form.contains(e.target)) {
@@ -85,6 +89,10 @@ modal.addEventListener("click", function(e) {
         pass.value = "";
         modal.classList.remove("modal2");
         document.body.style.overflow = "scroll";
+        loiten.classList.remove("loi");
+        inp.classList.remove("bored");
+        loipass.classList.remove("loi");
+        pass.classList.remove("bored");
     }
 })
 let dangky = document.querySelector(".dangky");
@@ -217,11 +225,27 @@ clos2.addEventListener("click", function(e) {
     e.preventDefault();
     dangky.classList.remove("dangky2");
     document.body.style.overflow = "scroll";
+    inp2.classList.remove("bored");
+    loiten2.classList.remove("loi");
+    email.classList.remove("bored");
+    loiemail.classList.remove("loi");
+    pass2.classList.remove("bored");
+    loipass2.classList.remove("loi");
+    reset.classList.remove("bored");
+    loireset.classList.remove("loi");
 })
 dangky.addEventListener("click", function(e) {
     if (!form2.contains(e.target)) {
         dangky.classList.remove("dangky2");
         document.body.style.overflow = "scroll";
+        inp2.classList.remove("bored");
+        loiten2.classList.remove("loi");
+        email.classList.remove("bored");
+        loiemail.classList.remove("loi");
+        pass2.classList.remove("bored");
+        loipass2.classList.remove("loi");
+        reset.classList.remove("bored");
+        loireset.classList.remove("loi");
     }
 })
 let right = document.querySelector(".right");
