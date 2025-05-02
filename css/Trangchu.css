@@ -676,18 +676,19 @@ body {
     padding: 40px 20px;
     color: green;
     font-weight: bolder;
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 550px;
     border-radius: 10px;
     position: relative;
 }
 
 .dangky form h2 {
     margin-top: -20px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
 
-.dangky form .name2,
+
+/* .dangky form .name2,
 .password2,
 .email,
 .resetpassword {
@@ -697,15 +698,36 @@ body {
     margin-bottom: 15px;
     border: none;
     box-shadow: 1px 1px 1px orange;
+} */
+
+.dangky input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: 1px 1px 1px orange;
 }
 
 .dangky .radio {
-    margin-left: -150px;
-    margin-bottom: 10px;
+    display: flex;
+    margin-left: -250px;
+    /* width: 100%; */
+    gap: 5px;
 }
 
+.dangky .radio input {
+    box-shadow: none;
+}
+
+
+/* .dangky .radio {
+    margin-left: -150px;
+    margin-bottom: 10px;
+} */
+
 .dangky form .submit {
-    margin-top: 20px;
+    margin-top: 10px;
     width: 90%;
     padding: 10px;
     margin-bottom: -10px;
@@ -737,7 +759,8 @@ body {
     cursor: pointer;
 }
 
-.dangky .loiten2,
+
+/* .dangky .loiten2,
 .loiemail,
 .loiradio,
 .loireset {
@@ -746,13 +769,22 @@ body {
     margin-left: -240px;
     font-size: 10px;
     display: none;
+} */
+
+.dangky p {
+    color: red;
+    margin-top: -10px;
+    margin-left: -340px;
+    margin-bottom: 5px;
+    font-size: 10px;
+    display: none;
 }
 
 .dangky .loipass2 {
     color: red;
     font-size: 10px;
-    margin-top: -14px;
-    margin-left: -160px;
+    margin-top: -10px;
+    margin-left: -260px;
     display: none;
 }
 

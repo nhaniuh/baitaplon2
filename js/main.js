@@ -114,10 +114,18 @@ let inp2 = document.querySelector(".name2");
 let pass2 = document.querySelector(".password2");
 let email = document.querySelector(".email");
 let reset = document.querySelector(".resetpassword");
+let date = document.querySelector(".date");
+let ten = document.querySelector(".ten");
+let phone = document.querySelector(".phone");
+let address = document.querySelector(".address");
 let loiten2 = document.querySelector(".loiten2");
 let loipass2 = document.querySelector(".loipass2");
 let loiemail = document.querySelector(".loiemail");
 let loireset = document.querySelector(".loireset");
+let loidate = document.querySelector(".loidate");
+let loiten3 = document.querySelector(".loiten3");
+let loiphone = document.querySelector(".loiphone");
+let loiaddress = document.querySelector(".loiaddress");
 sig.addEventListener("click", function(e) {
     e.preventDefault();
     modal.classList.remove("modal2");
@@ -134,8 +142,15 @@ submit.addEventListener("click", function(e) {
     let value2 = true;
     let value3 = true;
     let value4 = true;
-    let pattern = /^([A-ZÀ-Ỵ][a-zà-ỹ]+)(\s[A-ZÀ-Ỵ][a-zà-ỹ]+)+$/
+    let value5 = true;
+    let value6 = true;
+    let value7 = true;
+    let value8 = true;
+    let pattern = /^([A-ZÀ-Ỵ][A-Za-zà-ỹÀ-Ỵ]+)(\s[A-ZÀ-Ỵ][A-Za-zà-ỹÀ-Ỵ]+)+$/
     let pattern2 = /^[A-Z a-z0-9._%+-]+@gmail\.com$/
+    let pattern3 = /^([A-ZÀ-Ỵ][A-Za-zà-ỹÀ-Ỵ]+)(\s[A-ZÀ-Ỵ][A-Za-zà-ỹÀ-Ỵ]+)+$/
+    let pattern4 = /^0\d{9}$/
+    let pattern5 = /^([A-Z][A-Za-zà-ỹÀ-Ỵ]+)(\s[A-Z][A-Za-zà-ỹÀ-Ỵ]+)+$/
     if (inp2.value.trim() === "" || !pattern.test(inp2.value.trim())) {
         inp2.classList.add("bored");
         loiten2.classList.add("loi");
@@ -172,7 +187,43 @@ submit.addEventListener("click", function(e) {
         loireset.classList.remove("loi");
         value4 = true;
     }
-    if (value1 == true && value2 == true && value3 == true && value4 == true) {
+    if (date.value.trim() === "") {
+        date.classList.add("bored");
+        loidate.classList.add("loi");
+        value5 = false;
+    } else {
+        date.classList.remove("bored");
+        loidate.classList.remove("loi");
+        value5 = true;
+    }
+    if (ten.value.trim() === "" || !pattern3.test(ten.value.trim())) {
+        ten.classList.add("bored");
+        loiten3.classList.add("loi");
+        value6 = false;
+    } else {
+        ten.classList.remove("bored");
+        loiten3.classList.remove("loi");
+        value6 = true;
+    }
+    if (phone.value.trim() === "" || !pattern4.test(phone.value.trim())) {
+        phone.classList.add("bored");
+        loiphone.classList.add("loi");
+        value7 = false;
+    } else {
+        phone.classList.remove("bored");
+        loiphone.classList.remove("loi");
+        value7 = true;
+    }
+    if (address.value.trim() === "" || !pattern5.test(address.value.trim())) {
+        address.classList.add("bored");
+        loiaddress.classList.add("loi");
+        value8 = false;
+    } else {
+        address.classList.remove("bored");
+        loiaddress.classList.remove("loi");
+        value8 = true;
+    }
+    if (value1 == true && value2 == true && value3 == true && value4 == true && value5 == true && value6 == true && value7 == true && value8 == true) {
         dangky.classList.remove("dangky2");
         document.body.style.overflow = "scroll";
         form2.reset();
@@ -180,7 +231,7 @@ submit.addEventListener("click", function(e) {
 })
 
 function checkInp2() {
-    let pattern = /^([A-ZÀ-Ỵ][a-zà-ỹ]+)(\s[A-ZÀ-Ỵ][a-zà-ỹ]+)+$/
+    let pattern = /^([A-ZÀ-Ỵ][A-Za-zà-ỹÀ-Ỵ]+)(\s[A-ZÀ-Ỵ][A-Za-zà-ỹÀ-Ỵ]+)+$/
     inp2.addEventListener("input", function(e) {
         if (!pattern.test(e.target.value.trim())) {
             inp2.classList.add("bored");
@@ -232,6 +283,61 @@ function checkreset() {
     })
 }
 checkreset();
+
+function checkDate() {
+    date.addEventListener("input", function(e) {
+        if (date.value.trim() === "") {
+            date.classList.add("bored");
+            loidate.classList.add("loi");
+        } else {
+            date.classList.remove("bored");
+            loidate.classList.remove("loi");
+        }
+    })
+}
+checkDate();
+
+function checkTen() {
+    let pattern7 = /^([A-ZÀ-Ỵ][A-Za-zà-ỹÀ-Ỵ]+)(\s[A-ZÀ-Ỵ][A-Za-zà-ỹÀ-Ỵ]+)+$/
+    ten.addEventListener("input", function(e) {
+        if (ten.value.trim() === "" || !pattern7.test(ten.value.trim()) || ten.value.trim().length < 5) {
+            ten.classList.add("bored");
+            loiten3.classList.add("loi");
+        } else {
+            ten.classList.remove("bored");
+            loiten3.classList.remove("loi");
+        }
+    })
+}
+checkTen();
+
+function checkPhone() {
+    let pattern8 = /^0\d{9}$/
+    phone.addEventListener("input", function() {
+        if (phone.value.trim() === "" || !pattern8.test(phone.value.trim())) {
+            phone.classList.add("bored");
+            loiphone.classList.add("loi");
+        } else {
+            phone.classList.remove("bored");
+            loiphone.classList.remove("loi");
+        }
+    })
+}
+checkPhone();
+
+function checkAddress() {
+    let pattern9 = /^([A-Z][A-Za-zà-ỹÀ-Ỵ]+)(\s[A-Z][A-Za-zà-ỹÀ-Ỵ]+)+$/
+    address.addEventListener("input", function() {
+        if (address.value.trim() === "" || !pattern9.test(address.value.trim())) {
+            address.classList.add("bored");
+            loiaddress.classList.add("loi");
+        } else {
+            address.classList.remove("bored");
+            loiaddress.classList.remove("loi");
+        }
+    })
+}
+checkAddress();
 clos2.addEventListener("click", function(e) {
     e.preventDefault();
     dangky.classList.remove("dangky2");
@@ -244,6 +350,14 @@ clos2.addEventListener("click", function(e) {
     loipass2.classList.remove("loi");
     reset.classList.remove("bored");
     loireset.classList.remove("loi");
+    date.classList.remove("bored");
+    loidate.classList.remove("loi");
+    ten.classList.remove("bored");
+    loiten3.classList.remove("loi");
+    phone.classList.remove("bored");
+    loiphone.classList.remove("loi");
+    address.classList.remove("bored");
+    loiaddress.classList.remove("loi");
 })
 dangky.addEventListener("click", function(e) {
     if (!form2.contains(e.target)) {
@@ -257,5 +371,13 @@ dangky.addEventListener("click", function(e) {
         loipass2.classList.remove("loi");
         reset.classList.remove("bored");
         loireset.classList.remove("loi");
+        date.classList.remove("bored");
+        loidate.classList.remove("loi");
+        ten.classList.remove("bored");
+        loiten3.classList.remove("loi");
+        phone.classList.remove("bored");
+        loiphone.classList.remove("loi");
+        address.classList.remove("bored");
+        loiaddress.classList.remove("loi");
     }
 })
